@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyBKPP8MdhW_lCRg9ESF4vYfbsLWHJSlM3c</string>
+	<key>GCM_SENDER_ID</key>
+	<string>407407915700</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.alImran</string>
+	<key>PROJECT_ID</key>
+	<string>al-imran-fabrics-khi</string>
+	<key>STORAGE_BUCKET</key>
+	<string>al-imran-fabrics-khi.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:407407915700:ios:c9da530badb5c8d50fdde1</string>
+</dict>
+</plist>
