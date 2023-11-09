@@ -94,6 +94,12 @@ class _AdminHomeState extends State<AdminHome> {
                                                   '${snapshot.data!.docs[index]['itemCategory']}'),
                                               trailing: Wrap(children: [
                                                 Container(
+                                                  margin: const EdgeInsets.only(
+                                                      top: 25, right: 5),
+                                                  child: Text(
+                                                      'PKR ${snapshot.data!.docs[index]['itemPrice']}/-'),
+                                                ),
+                                                Container(
                                                     margin:
                                                         const EdgeInsets.only(
                                                             top: 10),

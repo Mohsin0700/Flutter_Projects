@@ -1,4 +1,3 @@
-// import 'package:al_imran/constants/app_consts.dart';
 import 'package:al_imran/screens/admin/add_items/add_items.dart';
 import 'package:al_imran/screens/admin/options/options.dart';
 import 'package:al_imran/screens/admin/bottom_nav_admin/admin_bottom_nav.dart';
@@ -11,11 +10,15 @@ import 'package:al_imran/screens/splash/splash.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
+import 'package:flutter/services.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   runApp(const MyApp());
+  SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitUp,
+  ]);
 }
 
 class MyApp extends StatelessWidget {
@@ -23,7 +26,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        // darkTheme: ThemeData(brightness: Brightness.light),
+        darkTheme: ThemeData(scaffoldBackgroundColor: Colors.white),
         initialRoute: '/splash',
         routes: {
           '/splash': (BuildContext context) => const Splash(),

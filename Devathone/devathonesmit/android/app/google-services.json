@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "574384087117",
+    "project_id": "devathone-smit",
+    "storage_bucket": "devathone-smit.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:574384087117:android:9a458f9f1efb7c79497c04",
+        "android_client_info": {
+          "package_name": "com.example.devathone"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBIa1W7FxLLm4KkkAQP74-iqjJyImJeenI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:574384087117:android:51afdb0dc86d881a497c04",
+        "android_client_info": {
+          "package_name": "com.example.devathonesmit"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBIa1W7FxLLm4KkkAQP74-iqjJyImJeenI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

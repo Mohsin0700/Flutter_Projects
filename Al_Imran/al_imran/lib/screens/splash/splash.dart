@@ -32,9 +32,6 @@ class _SplashState extends State<Splash> {
     Timer(const Duration(seconds: 1), () {
       getLoginDetails();
 
-      // isLoggedIn == true
-      // ? Navigator.pushReplacementNamed(context, '/bottomNav')
-      // : Navigator.pushReplacementNamed(context, '/login');
       if (isLoggedIn == true) {
         if (_isAdmin == true) {
           Navigator.pushReplacementNamed(context, '/adminBottomNav');

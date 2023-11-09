@@ -14,33 +14,27 @@ class ItemCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(10),
-      height: 100,
-      width: 100,
+      height: 10.0,
+      width: 10,
+      padding: const EdgeInsets.all(5),
       decoration: BoxDecoration(
-          color: AlImran.secondaryColor,
+          color: const Color.fromARGB(255, 238, 236, 236),
           borderRadius: BorderRadius.circular(30),
           border: Border.all(width: 1, color: AlImran.baseColor)),
       child: Column(
         children: [
-          ClipRRect(
-            borderRadius: BorderRadius.circular(30),
-            child: Image(
-              image: NetworkImage(images[0]),
-              height: 90,
-              width: 90,
-            ),
+          SizedBox(
+            width: double.infinity,
+            child: ClipRRect(
+                borderRadius: BorderRadius.circular(30),
+                child: Image(
+                    fit: BoxFit.cover,
+                    image: NetworkImage(images[0]),
+                    height: 90,
+                    width: 90)),
           ),
-          const Text(
-            'Item Name',
-            style: TextStyle(
-              fontSize: 18,
-            ),
-          ),
-          Text(
-            'PKR $price/-',
-            style: const TextStyle(fontSize: 14),
-          ),
+          const Text('Item Name', style: TextStyle(fontSize: 18)),
+          Text('PKR $price/-', style: const TextStyle(fontSize: 14))
         ],
       ),
     );

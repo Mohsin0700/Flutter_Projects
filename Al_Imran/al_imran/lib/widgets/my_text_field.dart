@@ -9,22 +9,25 @@ class MyTextField extends StatelessWidget {
       this.bottomLeft,
       this.bottomRight,
       required this.hintText,
-      required this.myIcon,
+      this.myIcon,
       required this.obsecureText,
-      required this.myController});
+      required this.myController,
+      this.lines});
 
   final double? topLeft;
   final double? topRight;
   final double? bottomLeft;
   final double? bottomRight;
+  final int? lines;
   final String hintText;
-  final IconButton myIcon;
+  final IconButton? myIcon;
   final bool obsecureText;
   final TextEditingController myController;
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      maxLines: lines ?? 1,
       controller: myController,
       obscureText: obsecureText,
       decoration: InputDecoration(

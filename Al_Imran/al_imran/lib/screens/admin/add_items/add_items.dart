@@ -26,6 +26,7 @@ class _AddItemState extends State<AddItem> {
   TextEditingController itemNameController = TextEditingController();
   TextEditingController itemPriceController = TextEditingController();
   Reference firebaseStorageReferenceRoot = FirebaseStorage.instance.ref();
+  TextEditingController descriptionController = TextEditingController();
 
   CollectionReference allItems =
       FirebaseFirestore.instance.collection('all_items');
@@ -68,12 +69,15 @@ class _AddItemState extends State<AddItem> {
       'itemCategory': AddItemConst.selectedCategory,
       'itemImages': itemImages,
       'imagesName': itemImagesName,
-      'itemPrice': itemPriceController.text
+      'itemPrice': itemPriceController.text,
+      'description': descriptionController.text
     }).then((value) {
       itemNameController.clear();
       isItemUploading = false;
       AddItemConst.images.clear();
       itemImagesName.clear();
+      itemPriceController.clear();
+      descriptionController.clear();
       setState(() {
         AddItemConst.selectedCategory = '0';
       });
@@ -106,7 +110,7 @@ class _AddItemState extends State<AddItem> {
                       const Text('Select Category',
                           style: TextStyle(fontSize: 16)),
                       const CategoryBuilder(),
-                      const SizedBox(height: 10),
+                      const SizedBox(height: 30),
                       const Text('Add Item Name',
                           style: TextStyle(fontSize: 16)),
                       MyTextField(
@@ -118,18 +122,30 @@ class _AddItemState extends State<AddItem> {
                           ),
                           obsecureText: false,
                           myController: itemNameController),
+                      const SizedBox(height: 30),
                       const Text('Add Item Price',
                           style: TextStyle(fontSize: 16)),
                       MyTextField(
                           hintText: 'Enter Product Price Here',
                           myIcon: IconButton(
                             onPressed: () {},
-                            icon: Icon(Icons.currency_bitcoin,
+                            icon: Icon(Icons.currency_exchange,
                                 color: AlImran.baseColor),
                           ),
                           obsecureText: false,
                           myController: itemPriceController),
-                      const SizedBox(height: 10),
+                      const SizedBox(height: 30),
+                      const Text(
+                        'Add Product Description',
+                        style: TextStyle(fontSize: 16),
+                      ),
+                      MyTextField(
+                        lines: 4,
+                        hintText: 'Description',
+                        obsecureText: false,
+                        myController: descriptionController,
+                      ),
+                      const SizedBox(height: 30),
                       const ItemImages()
                     ])),
               ),

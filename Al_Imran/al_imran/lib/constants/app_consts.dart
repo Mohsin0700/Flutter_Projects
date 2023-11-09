@@ -5,4 +5,5 @@ class AlImran {
   static Color unSelectedColor = const Color(0xff999999);
   static Color secondaryColor = const Color(0xffD9D9D9);
   static TextStyle regularTextStyle = const TextStyle(fontSize: 18);
+  static List cart = [];
 }
